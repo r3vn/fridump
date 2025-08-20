@@ -12,9 +12,9 @@ logo = """
         ______    _     _
         |  ___|  (_)   | |
         | |_ _ __ _  __| |_   _ _ __ ___  _ __
-        |  _| '__| |/ _` | | | | '_ ` _ \| '_ \\
+        |  _| '__| |/ _` | | | | '_ ` _ \\| '_ \\
         | | | |  | | (_| | |_| | | | | | | |_) |
-        \_| |_|  |_|\__,_|\__,_|_| |_| |_| .__/
+        \\_| |_|  |_|\\__,_|\\__,_|_| |_| |_| .__/
                                          | |
                                          |_|
         """
@@ -116,7 +116,7 @@ script = session.create_script(
 script.on("message", utils.on_message)
 script.load()
 
-agent = script.exports
+agent = script.exports_sync
 ranges = agent.enumerate_ranges(PERMS)
 
 if arguments.max_size is not None:
